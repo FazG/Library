@@ -1,0 +1,78 @@
+p {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    background: rgb(224, 221, 231);
+    justify-content: center;
+    margin: 5px; 
+    width: 200px;
+    padding: 9px;
+    word-wrap: break-word;
+}
+
+#booksContainer {
+    margin-left: 90px;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 5px;
+  }
+
+body {
+    text-align: center;
+}
+
+#textForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+  }
+
+#formContainer {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    padding: 15px;
+    background-color: rgb(216, 126, 62);
+    color: white;
+}
+
+#btn {
+    margin-top: 15px;
+    border-style: hidden;
+    color:rgb(90, 69, 69);
+}
+
+h1 {
+    margin: 30px;
+}
+
+.deleteButton {
+    color: white;
+    background-color: rgb(202, 78, 78);
+    border-style: hidden;
+    margin: 5px;
+}
+
+.readButton {
+    border-style: hidden;
+    margin: 5px;
+}
+
+#game-name {
+    --red: #fc5185;
+    --gray: #364f6b;
+    --light-white: #f0f0f0;
+    --blue: #43dde6;
+    font-family: "Righteous", cursive;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    color: var(--gray);
+    text-shadow: 4px 4px var(--red);
+}
