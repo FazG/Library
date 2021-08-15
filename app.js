@@ -2,17 +2,17 @@ let myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title = title
-  this.author = author 
-  this.pages = pages 
-  this.read = read 
-  this.info = function() {
-    return(`${title} by ${author}, ${pages} pages`);
+  this.author = author
+  this.pages = pages
+  this.read = read
+  this.info = function () {
+    return (`${title} by ${author}, ${pages} pages`);
   }
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "false");
+// const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "false");
 
-myLibrary = [theHobbit, theHobbit, theHobbit, theHobbit, theHobbit, theHobbit, theHobbit, theHobbit, theHobbit];
+myLibrary = [];
 
 function addBookToLibrary(title, author, pages, read) {
   let bookToAdd = new Book(title, author, pages, read);
@@ -33,17 +33,17 @@ function addBookToLibrary(title, author, pages, read) {
   p.appendChild(divbtn);
   library.appendChild(p);
 
-  btn.onclick = function() {
+  btn.onclick = function () {
     p.remove();
-    }
-  
-    btnr.onclick = function() {
-      btnr.innerText = btnr.innerText ==  "Read" ? "Not read" : "Read";
-      bookToAdd.read = bookToAdd.read == "false" ? "false" : "true";
-        }
-
-  
   }
+
+  btnr.onclick = function () {
+    btnr.innerText = btnr.innerText == "Read" ? "Not read" : "Read";
+    bookToAdd.read = bookToAdd.read == "false" ? "false" : "true";
+  }
+
+
+}
 
 library = document.getElementById("booksContainer")
 
@@ -63,18 +63,18 @@ for (let book of myLibrary) {
   p.appendChild(btnr);
   library.appendChild(p);
 
-    btn.onclick = function() {
-      p.remove();
-    }
-
-    btnr.onclick = function() {
-      btnr.innerText = btnr.innerText ==  "Read" ? "Not read" : "Read";
-      book.read = book.read == "false" ? "false" : "true";
-        }
-
+  btn.onclick = function () {
+    p.remove();
   }
 
-const btn = document.querySelector('#btn'); 
+  btnr.onclick = function () {
+    btnr.innerText = btnr.innerText == "Read" ? "Not read" : "Read";
+    book.read = book.read == "false" ? "false" : "true";
+  }
+
+}
+
+const btn = document.querySelector('#btn');
 const frm = document.querySelector('#frm1');
 
 btn.onclick = function () {
@@ -82,10 +82,10 @@ btn.onclick = function () {
   console.log(rbs);
   let selectedValueRead;
   for (const rb of rbs) {
-      if (rb.checked) {
-          selectedValueRead = rb.value;
-          break;
-      }
+    if (rb.checked) {
+      selectedValueRead = rb.value;
+      break;
+    }
   }
 
   let title = document.querySelector('input[name="title"]').value;
